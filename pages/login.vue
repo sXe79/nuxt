@@ -10,11 +10,11 @@ const userCredentials = {
 </script>
 
 <template>
-    <form action="">
-        <input type="email" name="email" id="email" placeholder="email">
-        <input type="password" name="password" id="password" placeholder="password">
+    <form action="" class="w-3/12 text-center">
+        <input v-model="userCredentials.email" class="mb-2" type="email" name="email" id="email" placeholder="email">
+        <input v-model="userCredentials.password" class="mb-2" type="password" name="password" id="password" placeholder="password">
 
-        <p @click.prevent="login(userCredentials)">Login</p>
+        <button class="bg-green-600 text-white uppercase p-3 px-5 border-2 border-green-800 rounded-xl" @click.prevent="login(userCredentials)">Login</button>
     </form>
 </template>
 

@@ -37,8 +37,14 @@ const columns = [
         key: 'price_formatted',
         label: 'Price',
         sortable: true,
+        type: Number,
     }, {
-        key: 'state',
+        key: 'position',
+        label: 'Posizione',
+        sortable: true,
+        //type: Number,
+    }, {
+        key: 'status',
         label: 'Status',
         class: 'text-center w-1',
         sortable: true,
@@ -70,7 +76,7 @@ const actions = [
 
     <NuxtLink to="/item/create">Crea</NuxtLink>
 
-    <Table :columns="columns"
+<!--    <Table :columns="columns"
            :filterable="true"
            :selectable="true"
            class="rounded-t-lg overflow-hidden">
@@ -103,7 +109,7 @@ const actions = [
                 <td :colspan="columns.length +1">Custom footer</td>
             </tr>
         </template>
-    </Table>
+    </Table>-->
 
     <Table :columns="columns"
            :data="data"

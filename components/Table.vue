@@ -105,12 +105,12 @@ const setDirection = (sortColumnDirection) => {
     <table>
         <thead>
             <tr>
-                <th :colspan="props.columns.length">
+                <th :colspan="props.columns.length + 1">
                     <Select :columns="props.columns" /> <!-- Use VueSelect? -->
                 </th>
             </tr>
             <tr v-if="props.filterable">
-                <th :colspan="props.columns.length">
+                <th :colspan="props.columns.length + 1">
                     <input v-model="filter"
                            class="w-full rounded-md border-gray-300 text-black shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                            type="text"
@@ -130,7 +130,8 @@ const setDirection = (sortColumnDirection) => {
                              class="ml-2"
                              :class="(sortColumnFocus === item.key) ? 'bg-blue-400 rounded-full p-1' : ''">
                             <Icon :name="(sortColumnFocus === item.key) ? sortColumnIcon : 'sort'"
-                                  @mousedown="sortActions(item.key)"
+                                  :style="'solid'"
+                                  @click="sortActions(item.key)"
                                   class="size-4 cursor-pointer" />
                         </div>
 

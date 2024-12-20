@@ -5,7 +5,7 @@ import { ArrowUpDownIcon, BarsArrowDownIcon, BarsArrowUpIcon, EyeIcon, PencilSqu
 import * as solid from '@heroicons/vue/24/solid';
 import * as outline from '@heroicons/vue/24/outline';
 
-const props = defineProps(['name'])
+const props = defineProps(['name', 'style'])
 
 /*const icons = computed(() => {
     return {solid, outline}
